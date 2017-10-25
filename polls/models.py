@@ -23,7 +23,8 @@ class Choice(models.Model):
     	return self.choice_text
 
 class Quarterback(models.Model):
-    name = models.CharField(max_length=200, default="yo")
+    firstname = models.CharField(max_length=200, default="ay")
+    lastname = models.CharField(max_length=200, default="ay")
     yards = models.IntegerField(default=0)
 
     def __str__(self):

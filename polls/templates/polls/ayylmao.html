@@ -1,8 +1,25 @@
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}" />
+
 {% if player_list %}
-	{% for quarterback in player_list %}
-		<h1>{{ quarterback.name }}</h1>
-		<p>{{ quarterback.yards }} yards</p>
-	{% endfor %}
+	<div id="container">
+		{% for quarterback in player_list %}
+			<div>
+				<img id="{{ quarterback.lastname }}image" src="">
+				<h1>{{ quarterback.firstname }} {{ quarterback.lastname }}</h1>
+				<p>{{ quarterback.yards }} yards</p>
+			</div>
+			<script type="text/javascript">
+				var imageLoc = "{{ quarterback.lastname }}";
+				//imageLoc2 = imageLoc + "image";
+				imageLoc = 'polls/images/'+imageLoc+'.jpg';
+				imageLoc = "{% static '"+ imageLoc + "'' %}";
+				document.getElementById("{{ quarterback.lastname }}image").src=imageLoc;
+				console.log(imageLoc);
+			</script>
+		{% endfor %}
+	</div>
 {% else %}
 	<p>No QBs are available.</p>
 {% endif %}

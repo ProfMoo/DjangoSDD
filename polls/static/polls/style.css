@@ -1,0 +1,20 @@
+/*body {
+	background: white url("images/benroethlisberger.jpg") no-repeat right top;
+}*/
+img {
+	width: 100px;
+	height: 100px;
+	border-radius: 100%;
+}
+div {
+	border: 1px solid black;
+	padding: 4px;
+	width: 40%;
+}
+h1 {
+	color: #fa8072;
+	text-align: left;
+}
+p {
+	color: #3C3C3C;
+}

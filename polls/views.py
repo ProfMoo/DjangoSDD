@@ -26,7 +26,7 @@ class AyyLmao(generic.ListView):
 	context_object_name = 'player_list'
 	def get_queryset(self):
 		"""return the last five published questions"""
-		return Quarterback.objects.order_by('name')
+		return Quarterback.objects.order_by('lastname')
 
 def vote(request, question_id):
 	question = get_object_or_404(Question, pk=question_id)
