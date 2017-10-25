@@ -1,0 +1,8 @@
+{% if player_list %}
+	{% for quarterback in player_list %}
+		<h1>{{ quarterback.name }}</h1>
+		<p>{{ quarterback.yards }} yards</p>
+	{% endfor %}
+{% else %}
+	<p>No QBs are available.</p>
+{% endif %}
